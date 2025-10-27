@@ -6,7 +6,8 @@
     <title>CSS Nav Bar</title>
     <style>
         /* CSS for the Navigation Bar */
-        .nav-bar {
+        /* FIX: Renamed .nav-bar to .container to match test expectation */
+        .container {
             /* Acceptance Criteria: Background color and padding for the nav-bar container */
             background-color: #D3D3D3; /* Light Gray */
             padding: 10px;
@@ -18,11 +19,12 @@
             /* Optional: Remove default margin/padding from the <ul> element for a cleaner look */
             margin: 0;
             padding: 0;
+            /* FIX: Changed display to flex on the UL to align with test expectation */
+            display: flex;
         }
 
         .nav-list li {
-            /* Acceptance Criteria: Display items horizontally */
-            display: inline;
+            /* REMOVED: display: inline; as the UL now uses display: flex */
             /* Acceptance Criteria: Spacing between list items */
             margin-right: 1rem;
         }
@@ -42,7 +44,8 @@
 </head>
 <body>
 
-    <nav class="nav-bar">
+    <!-- FIX: Changed class name from nav-bar to container -->
+    <nav class="container">
         <ul class="nav-list">
             <li><a href="#">Home</a></li>
             <li><a href="#">About</a></li>
@@ -52,7 +55,7 @@
     </nav>
 
     <h1>Navigation Bar Example</h1>
-    <p>The navigation links above are displayed horizontally using <code>display: inline</code> on the list items, and the container has a light gray background.</p>
+    <p>The navigation links above are displayed horizontally using <code>display: flex</code>, and the container has a light gray background.</p>
 
 </body>
 </html>
