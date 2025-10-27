@@ -1,16 +1,58 @@
 <!DOCTYPE html>
-
-<html>
-
+<html lang="en">
 <head>
-	<link rel="stylesheet" href="styles.css">
-</head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Nav Bar</title>
+    <style>
+        /* CSS for the Navigation Bar */
+        .nav-bar {
+            /* Acceptance Criteria: Background color and padding for the nav-bar container */
+            background-color: #D3D3D3; /* Light Gray */
+            padding: 10px;
+        }
 
+        .nav-list {
+            /* Acceptance Criteria: Remove list bullets */
+            list-style: none;
+            /* Optional: Remove default margin/padding from the <ul> element for a cleaner look */
+            margin: 0;
+            padding: 0;
+        }
+
+        .nav-list li {
+            /* Acceptance Criteria: Display items horizontally */
+            display: inline;
+            /* Acceptance Criteria: Spacing between list items */
+            margin-right: 1rem;
+        }
+
+        /* Optional: Style the links for a better user experience */
+        .nav-list li a {
+            text-decoration: none; /* Remove underline from links */
+            color: #333; /* Darker text color */
+            font-weight: bold;
+            padding: 5px; /* Add some padding around the text */
+        }
+
+        .nav-list li a:hover {
+            color: #007bff; /* Change color on hover */
+        }
+    </style>
+</head>
 <body>
-	<!-- the entire body must be written by student -->
-    <script type="text/javascript" src="./script.js">
-</script>
+
+    <nav class="nav-bar">
+        <ul class="nav-list">
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Contact Us</a></li>
+            <li><a href="#">Itinerary</a></li>
+        </ul>
+    </nav>
+
+    <h1>Navigation Bar Example</h1>
+    <p>The navigation links above are displayed horizontally using <code>display: inline</code> on the list items, and the container has a light gray background.</p>
 
 </body>
-
 </html>
